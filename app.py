@@ -28,13 +28,32 @@ def welcome():
         f"For the region parameter, enter the region with %20 in place of spaces.<br/>"
         f"<br/>"
         f"Available Routes:<br/>"
+        f"/api/v1.0/alldata<br/>"
         f"/api/v1.0/country/{{Country}}<br/>"
         f"/api/v1.0/year/{{Year}}<br/>"
         f"/api/v1.0/region/{{region}}%<br/>"
         f"/api/v1.0/countryCode/{{countryCode}}<br/>"
     )
 
+@app.route("/api/v1.0/alldata")
+def allData():
+    session = Session(engine)
+    results = session.query(pmd.Country, pmd.Year, pmd.MMR, pmd.Ranges, pmd.Region, pmd.Country_Code).all()
+    session.close()
 
+    allData = []
+    for countryname, year, mmr, ranges, region, country_code in results:
+        allData_dict = {}
+        allData_dict["Country"] = countryname
+        allData_dict["Year"] = year
+        allData_dict["MMR"] = mmr
+        allData_dict["Ranges"] = ranges
+        allData_dict["Region"] = region
+        allData_dict["Country Code"] = country_code
+
+        allData.append(allData_dict)
+
+    return jsonify(allData)
 
 @app.route("/api/v1.0/country/<country>")
 def countryInfo(country):
