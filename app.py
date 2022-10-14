@@ -5,6 +5,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 #setup database
 engine = create_engine("sqlite:///pmd.sqlite")
@@ -15,6 +16,8 @@ pmd = Base.classes.pmd
 
 #flask setup
 app = Flask(__name__)
+
+CORS(app)
 
 #flask routes
 @app.route("/")
@@ -41,7 +44,7 @@ def allData():
     results = session.query(pmd.Country, pmd.Year, pmd.MMR, pmd.Ranges, pmd.Region, pmd.Country_Code).all()
     session.close()
 
-    allData = []
+    allData = []    
     for countryname, year, mmr, ranges, region, country_code in results:
         allData_dict = {}
         allData_dict["Country"] = countryname
