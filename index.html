@@ -1,141 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Project 3 </title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navigate</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">LINK TO MAP</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Choose year
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">2019</a>
-            <a class="dropdown-item" href="#">2018</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Enter Year</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">WELCOME TO PROJECT 3!</h1>
-      <p class="lead">Introduction</p>
-      <hr class="my-4">
-      <p>Read me contents</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
-  </div>
-
-<div class="container">
-  <h3 class="text-center">Graphs</h3>
-    <div class="row">
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="..." class="img-thumbnail">
-          </div>
-          <div class="caption">
-              <h3>Graph 1</h3>
-              <p>...</p>
-              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Openn</a></p>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Nightmare Fuel's Project 3</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">World Maternal Mortality Rate</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Bar Chart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Repo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">References</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-
-        <div class="col-md-4">
-            <div class="thumbnail">
-              <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="..." class="img-thumbnail">
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to Project 3</h1>
+                <p class="lead">A project focused on Maternal Mortality Rates around the world</p>
+                <ul>
+                    <p><b>This Project is made by:</b></p>
+                    <li>Mark Martinez</li>
+                    <li>Christina Saenz</li>
+                    <li>Karan Shah</li>
+                </ul>
+                <a class="btn btn-lg btn-light" href="#about">See our Graphs!</a>
             </div>
-          <div class="caption">
-              <h3>Graph 2</h3>
-              <canvas id="myLineChart" style="width:100%;max-width:700px"></canvas>
-              <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Open</a></p> -->
-          </div>
-        </div>
-
-
-
-        <div class="col-md-4">
-            <div class="thumbnail">
-              <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="..." class="img-thumbnail">
+        </header>
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>What is Maternal Mortality?</h2>
+                        <p class="lead">The U.S Centers for Disease Control and Prevention states that Maternal Mortality includes outcomes of labor and delivery that result in significant short- or long-term consequences to a woman's health.</p>
+                        <ul>
+                            <p><b>Severe Maternal Mortality is most likely to occur for Women who are:</b></p>
+                            <li>20 years or younger</li>
+                            <li>40 years or older</li>
+                            <li>Citizens of low-income counties or districts.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="caption">
-                <h3>Graph 2</h3>
-                <p>...</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Open</a></p>
-          </div>
-        </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <h3 class="text-center">Facts</h3>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Fun Fact</h5>
-              <p class="card-text">Vatican City is the smallest country in the world!</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        </section>
+        <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Bar Chart</h2>
+                        <p class="lead">This tall chart is meant to signify the Overall % of population lost due to Maternal Mortality from 2000 to 2017</p>
+                        <canvas id="bar-chart" width="500" height="700"></canvas>
+                        <ul>
+                            <li>Here we can See the MMR rates are the highest In North and Sub saharan Africa</li>
+                            <li>Followed closely by East Asia, Latin America and Oceania</li>
+                            <li>Despite the loss of life being significant, The low deaths in more developed nations shed a ray of light.</li>
+                            <li>Better availabilities of medical infrastructre and awareness about reproductive health has enabled more developed nations to reduce the deaths caused by Maternal Mortality overall.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-    </div>
-
-
-  <div class="row">
-    <div class="col">
-      <h3 class="text-center">Navigate</h3>
-      <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">PMD</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Worldmap</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"> Line Chart</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Bar Chart</a>
-          </li>
-        </ul>
-      </div>
-  </div>
-    
-  </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js" integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
+        </section>
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Polar Chart</h2>
+                        <p class="lead">This Polar chart is meant to signify the Top Causes of Maternal Mortality from 287000 cases just in 2010(by %)</p>
+                        <canvas id="polar-chart" width="800" height="450"></canvas>
+                        <ul>
+                            <li>The Causes of death are mostly preventable</li>
+                            <li>Nearly all (99 per cent) of abortion deaths are due to unsafe abortions.</li>
+                            <li>The global distribution was affected by the two regions, sub-Saharan Africa and southern Asia</li>
+                            <li>Hypertensive disorders were a particularly important cause of death in Latin American and the Caribbean</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Top Causes of Maternal Mortality</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Contact us</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js" integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
 <script type="text/javascript" src="logic.js"></script>
-</body>
-
+    </body>
 </html>
