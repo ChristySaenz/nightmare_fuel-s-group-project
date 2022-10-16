@@ -1,0 +1,1 @@
+{"id":"60f42724-9a54-4979-8ece-a17423dc39dc","space":35300,"runtime":"python3.7","name":"first_micro","path":"crpw43","project":"b0zr0b65","account":"144798365827","region":"us-west-1","deps":["sqlalchemy","flask","flask_cors"],"envs":null,"public":true,"log_level":"off","cron":""}
