@@ -306,7 +306,7 @@ for (let elt of data) {
         northAm_mmr.push(elt.MMR);
     } else {
         baltics.push(elt);
-        baltics_mmr.push(elt).MMR;
+        baltics_mmr.push(elt.MMR);
     }
 
 };
@@ -358,17 +358,17 @@ for (let elt of data) {
         return (accumulator + currentValue);
     };
     
-    let asiaExallavg = ((asiaEx_mmr.reduce(sum_reducer) / asiaEx_mmr.length)/3687982236)*100
-    let eEuropeallavg = ((eEurope_mmr.reduce(sum_reducer) / eEurope_mmr.length)/119914717)*100
-    let northAfricaallavg = ((northAfrica_mmr.reduce(sum_reducer) / northAfrica_mmr.length)/161407133)*100
-    let SSAfricaallavg = ((SSAfrica_mmr.reduce(sum_reducer) / SSAfrica_mmr.length)/749437000)*100
-    let latinAmallavg = ((latinAm_mmr.reduce(sum_reducer) / latinAm_mmr.length)/561824599)*100
-    let CWIallavg = ((CWI_mmr.reduce(sum_reducer) / CWI_mmr.length)/280081548)*100
-    let oceaniaallavg = ((oceania_mmr.reduce(sum_reducer) / oceania_mmr.length)/33131662)*100
-    let wEuropeallavg = ((wEurope_mmr.reduce(sum_reducer) / wEurope_mmr.length)/396339998)*100
-    let nearEastallavg = ((nearEast_mmr.reduce(sum_reducer) / nearEast_mmr.length)/195068377)*100
-    let northAmallavg = ((northAm_mmr.reduce(sum_reducer) / northAm_mmr.length)/331672307)*100
-    let balticsallavg = ((baltics_mmr.reduce(sum_reducer) / baltics_mmr.length)/71849740)*100
+    let asiaExallavg = asiaEx_mmr.reduce(sum_reducer) / asiaEx_mmr.length
+    let eEuropeallavg = eEurope_mmr.reduce(sum_reducer) / eEurope_mmr.length
+    let northAfricaallavg = northAfrica_mmr.reduce(sum_reducer) / northAfrica_mmr.length
+    let SSAfricaallavg = SSAfrica_mmr.reduce(sum_reducer) / SSAfrica_mmr.length
+    let latinAmallavg = latinAm_mmr.reduce(sum_reducer) / latinAm_mmr.length
+    let CWIallavg = CWI_mmr.reduce(sum_reducer) / CWI_mmr.length
+    let oceaniaallavg = oceania_mmr.reduce(sum_reducer) / oceania_mmr.length
+    let wEuropeallavg = wEurope_mmr.reduce(sum_reducer) / wEurope_mmr.length
+    let nearEastallavg = nearEast_mmr.reduce(sum_reducer) / nearEast_mmr.length
+    let northAmallavg = northAm_mmr.reduce(sum_reducer) / northAm_mmr.length
+    let balticsallavg = baltics_mmr.reduce(sum_reducer) / baltics_mmr.length
 
 
         // let asiaEx00avg = asiaEx00.reduce(sum_reducer) / asiaEx00.length;
@@ -445,13 +445,13 @@ new Chart(document.getElementById("bar-chart"), {
         "North America","Oceania","Sub-saharan Africa","Western Europe"],
       datasets: [
         {
-          label: "Overall % of population lost to Maternal Mortality from 2000 to 2017 (*1000)",
+          label: "Total Maternal Mortality Rate Worldwide from 2000 - 2017",
           backgroundColor: ["red", "blue","purple","orange","pink","green","brown","cyan",
           "teal","black","gray"],
-          data: [asiaExallavg*1000, balticsallavg*1000, CWIallavg*1000, 
-            eEuropeallavg*1000, latinAmallavg*1000, nearEastallavg*1000, 
-            northAfricaallavg*1000, northAmallavg*1000, oceaniaallavg*100, 
-            SSAfricaallavg*1000, wEuropeallavg*1000]
+          data: [asiaExallavg, balticsallavg, CWIallavg, 
+            eEuropeallavg, latinAmallavg, nearEastallavg, 
+            northAfricaallavg, northAmallavg, oceaniaallavg, 
+            SSAfricaallavg, wEuropeallavg]
         }
       ]
     },
