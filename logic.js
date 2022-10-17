@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-let url = "http://127.0.0.1:5000/api/v1.0/alldata";
+let url = "https://crpw43.deta.dev/api/v1.0/alldata";
 
 let pmd = d3.json(url);
 
