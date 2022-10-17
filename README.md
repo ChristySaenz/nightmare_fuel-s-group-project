@@ -1,4 +1,4 @@
-### nightmare_fuel's-group-project
+### Nightmare_Fuel's-group-project
 # Project Proposal
 
 We at Nightmare Fuel are focusing on the reproductive health of women around the world. We wish to analyze the countries around the world and how they handle the nuanced field of childbirth and how many counties establish a safe environment to reduce maternal mortality rates and childbirth and cost efficiency in general.
