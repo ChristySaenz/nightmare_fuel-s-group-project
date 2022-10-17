@@ -7,11 +7,31 @@
         <meta name="author" content="" />
         <title>Nightmare Fuel's Project 3</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="styles.css" rel="stylesheet" />
+        
+        <!-- Leaflet JavaScript code-->
+        <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+        
+        <!-- D3 library -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin=""/>
+
+        <!-- leaflet-choropleth JavaScript -->
+        <script type="text/javascript" src="choropleth.js"></script>
+
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+       
+
     </head>
-    <body id="page-top">
-        <!-- Navigation-->
+    <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
                 <a class="navbar-brand" href="#page-top">World Maternal Mortality Rate</a>
@@ -24,7 +44,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
@@ -36,13 +56,12 @@
                     <p>Christina Saenz</p>
                     <p>Karan Shah</p>
                 </ul>
-                <a class="btn btn-lg btn-light" href="#about">See our Graphs!</a>
             </div>
-        </header>
+        </header> -->
+
         <section class="bg-light" id="services">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
                         <h2>What is Maternal Mortality?</h2>
                         <p class="lead">As Per The World Health Organization The maternal mortality ratio (MMR) is defined as the number of maternal deaths during a given time period per 100,000 live births during the same time period.<br>According to the WHO official website, It depicts the risk of maternal death relative to the number of live births and essentially captures the risk of death in a single pregnancy or a single live birth. Maternal deaths: The annual number of female deaths from any cause related to or aggravated by pregnancy or its management (excluding accidental or incidental causes) during pregnancy and childbirth or within 42 days of termination of pregnancy, irrespective of the duration and site of the pregnancy, expressed per 100,000 live births, for a specified time period.</br> </p>
                         <ul>
@@ -56,13 +75,14 @@
             </div>
         </section>
         <!-- About section-->
-        <section id="about">
+        
+        <section class="bg-light" id="worldmap">  
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Bar Chart</h2>
+                        <h2>World Map</h2>
                         <p class="lead">This tall chart is meant to signify the Total Maternal Mortality Ratio Worldwide (per 100,000) from 2000 - 2017</p>
-                        <canvas id="bar-chart" width="500" height="700"></canvas>
+                        <div id="map" ></div>
                         <ul>
                             <li>Here we can See the MMRs are the highest Sub saharan Africa</li>
                             <li>Followed closely by Asia, Latin America and Oceania</li>
@@ -73,13 +93,32 @@
                 </div>
             </div>
         </section>
+        
+        <section id="about"> 
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Bar Chart</h2>
+                        <p class="lead">This tall chart is meant to signify the Total Maternal Mortality Ratio Worldwide (per 100,000) from 2000 - 2017</p>
+                        <canvas id="bar-chart" width="500" height="300"></canvas>
+                        <ul>
+                            <li>Here we can See the MMRs are the highest Sub saharan Africa</li>
+                            <li>Followed closely by Asia, Latin America and Oceania</li>
+                            <li>Despite the loss of life being significant, The low deaths in more developed nations shed a ray of light.</li>
+                            <li>Better availabilities of medical infrastructure and awareness about reproductive health has enabled more developed nations to reduce the deaths caused by Maternal Mortality overall.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
         <section id="about">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Polar Chart:Top Causes of Maternal Mortality</h2>
                         <p class="lead">This Polar chart is meant to signify the Top Causes of Maternal Mortality from 287000 cases just in 2010(by %)</p>
-                        <canvas id="polar-chart" width="800" height="450"></canvas>
+                        <canvas id="myLineChart" width="50" height="25"></canvas>
                         <ul>
                             <li>The Causes of death are mostly preventable</li>
                             <li>Nearly all (99 per cent) of abortion deaths are due to unsafe abortions.</li>
@@ -88,27 +127,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> 
         </section>
-        <section id="about">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Polar Chart:Top Causes of Maternal Mortality</h2>
-                        <p class="lead">This Polar chart is meant to signify the Top Causes of Maternal Mortality from 287000 cases just in 2010(by %)</p>
-                        <canvas id="myLineChart" width="50" height="50"></canvas>
-                        <ul>
-                            <li>The Causes of death are mostly preventable</li>
-                            <li>Nearly all (99 per cent) of abortion deaths are due to unsafe abortions.</li>
-                            <li>The global distribution was affected by the two regions, sub-Saharan Africa and southern Asia</li>
-                            <li>Hypertensive disorders were a particularly important cause of death in Latin American and the Caribbean</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services section-->
-        <section class="bg-light" id="services">
+        <--Services section-->
+        <section class="bg-light" id="services"> 
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
@@ -140,10 +162,8 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
+ 
+      
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -153,6 +173,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js" integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script type="text/javascript" src="logic.js"></script>
+    
         <script type="text/javascript" src="linelogic.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script type="text/javascript" src="logicc.js"></script>
+        
     </body>
 </html>
