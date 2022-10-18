@@ -7,29 +7,21 @@
         <meta name="author" content="" />
         <title>Nightmare Fuel's Project 3</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        
         <!-- Leaflet JavaScript code-->
         <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
         integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-        
         <!-- D3 library -->
         <script src="https://d3js.org/d3.v5.min.js"></script>
-
         <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
         integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin=""/>
-
         <!-- leaflet-choropleth JavaScript -->
         <script type="text/javascript" src="choropleth.js"></script>
-
         <!-- Our CSS -->
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="stylesheet" type="text/css" href="style.css">
-
-       
-
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -38,7 +30,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">Bar Chart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Graphs</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://github.com/ChristySaenz/nightmare_fuel-s-group-project">Repo</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">References</a></li>
                     </ul>
@@ -58,7 +50,6 @@
                 </ul>
             </div>
         </header> -->
-
         <section class="bg-light" id="services">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
@@ -75,8 +66,7 @@
             </div>
         </section>
         <!-- About section-->
-        
-        <section class="bg-light" id="worldmap">  
+        <section class="bg-light" id="worldmap">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
@@ -93,8 +83,7 @@
                 </div>
             </div>
         </section>
-        
-        <section id="about"> 
+        <section id="about">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
@@ -110,31 +99,14 @@
                     </div>
                 </div>
             </div>
-        </section> 
-        
+        </section>
         <section id="about">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Polar Chart:Top Causes of Maternal Mortality</h2>
-                        <p class="lead">This Polar chart is meant to signify the Top Causes of Maternal Mortality from 287000 cases just in 2010(by %)</p>
+                        <h2>Line Chart: MMR per Region per Year (2000-2017)</h2>
+                        <p class="lead">This line chart shows the MMRs per Region per year.</p>
                         <canvas id="myLineChart" width="50" height="25"></canvas>
-                        <ul>
-                            <li>The Causes of death are mostly preventable</li>
-                            <li>Nearly all (99 per cent) of abortion deaths are due to unsafe abortions.</li>
-                            <li>The global distribution was affected by the two regions, sub-Saharan Africa and southern Asia</li>
-                            <li>Hypertensive disorders were a particularly important cause of death in Latin American and the Caribbean</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> 
-        </section>
-        <--Services section-->
-        <section class="bg-light" id="services"> 
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <p class="lead">Ultimately it appears that over the past 18 years the resiongs with the highest Maternal Mortality Ratios have decreased the most in regions that started with the highest MMR and seem to have remained fairly stable in countries that started with a lower MMR. This could be due to technological improvements and increased ease of access to medical equipment in those regions.  </p>
                     </div>
                 </div>
             </div>
@@ -146,24 +118,16 @@
                     <div class="col-lg-8">
                         <h2>References</h2>
                         <p class="lead">We at Nightmare Fuel are focusing on the reproductive health of women around the world. We wish to analyze the countries around the world and how they handle the nuanced field of childbirth and how many counties establish a safe environment to reduce maternal mortality rates and childbirth and cost efficiency in general.
-
                             <br>Resources:</br>
-                            
                             <br><a href="https://www.kaggle.com/datasets/fernandol/countries-of-the-world">Reproductive health of Women around the world -Countries of the world data about every country in the world range from population to GDP.</a></br>
-                            
                             <br><a href="https://www.kaggle.com/datasets/utkarshxy/who-worldhealth-statistics-2020-complete?resource=download&select=maternalMortalityRatio.csv">Maternal Mortality rate -Data set about Maternal mortality ratio per 100,000 births</a> </br>
-                            
                             <br><a href="https://www.kaggle.com/datasets/utkarshxy/who-worldhealth-statistics-2020-complete?select=birthAttendedBySkilledPersonal.csv">Birth attended by Skilled Professional</a> </br>
-                            
                             <br><a href="https://www.kaggle.com/datasets/utkarshxy/who-worldhealth-statistics-2020-complete?select=uhcCoverage.csv">Universal healthcare Coverage.</a> </br>
-                            
                             <br>Our goal at Nightmare Fuel is to examine the existence of correlations between access to health care, access to skilled medical professionals, and the mortality rates during childbirth throughout the world. This information could ideally be utilized to inform social policy reform surrounding health care systems as they relate to maternal care.</br> </p>
                     </div>
                 </div>
             </div>
         </section>
- 
-      
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -173,10 +137,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js" integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script type="text/javascript" src="logic.js"></script>
-    
         <script type="text/javascript" src="linelogic.js"></script>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script type="text/javascript" src="logicc.js"></script>
-        
     </body>
 </html>
